@@ -1,0 +1,31 @@
+name: flutter_native_transliterate
+description: >-
+  On-device script transliteration using the OS-native ICU engine (Android
+  android.icu.text.Transliterator, iOS CFStringTransform). No network, no API
+  key - e.g. Latin->Devanagari/Tamil/Kannada. Returns input unchanged on
+  unsupported OS so it is always safe to call.
+version: 0.1.0
+homepage: https://github.com/vairagadeharshwardhan/flutter_native_transliterate
+repository: https://github.com/vairagadeharshwardhan/flutter_native_transliterate
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.3.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: dev.flutter.plugins.flutter_native_transliterate
+        pluginClass: FlutterNativeTransliteratePlugin
+      ios:
+        pluginClass: FlutterNativeTransliteratePlugin
